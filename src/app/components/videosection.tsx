@@ -1,21 +1,22 @@
 "use client";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import  { useState } from "react";
-const videosection=() => {
-   useEffect(() => {
-      AOS.init({
-        duration: 1500, 
-        easing: "ease-in-out",
-        once: true, 
-          });
-    }, []);
-  
-    const [isVisible, setIsVisible] = useState(true);
-  
-    const handleClick = () => {
-      setIsVisible(false); };
+const Videosection=() => {
+  const [isVisible, setIsVisible]=useState(true);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
+
+  const handleClick=() => {
+    setIsVisible(false);
+  };
   return (
     <div className="h-auto bg-[#0c001b] text-white flex flex-col text-centre justify-center ">
       <div className="flex flex-col items-center justify-center relative  py-6  ">
@@ -30,24 +31,24 @@ const videosection=() => {
 
       <div className="flex justify-center mt-4 ">
 
-      <div className="shadow-custom-purple hover:shadow-custom-large bg-blue-russian-gradient rounded-md w-[80%] md:w-3/4 h-[135px] md:h-[435px] p-[1px]  " data-aos="fade-up">
+        <div className="shadow-custom-purple hover:shadow-custom-large bg-blue-russian-gradient rounded-md w-[80%] md:w-3/4 h-[135px] md:h-[435px] p-[1px]  " data-aos="fade-up">
 
-      <div
-      className="w-full h-[132px] md:h-[432px] bg-[#140930] rounded-md flex items-center justify-center"
-      onClick={handleClick} >
-      {isVisible && (
-        <img
-        src="/Vector.png"
-        alt="image"
-        className="w-[50px] h-[50px]"
-        />
-      )}
-    </div>
-      </div>
+          <div
+            className="w-full h-[132px] md:h-[432px] bg-[#140930] rounded-md flex items-center justify-center"
+            onClick={handleClick} >
+            {isVisible&&(
+              <img
+                src="/Vector.png"
+                alt="image"
+                className="w-[50px] h-[50px]"
+              />
+            )}
+          </div>
+        </div>
 
       </div>
     </div>
   );
 };
 
-export default videosection;
+export default Videosection;

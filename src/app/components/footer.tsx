@@ -1,9 +1,9 @@
 import React from 'react'
 
-const footer=() => {
+const Footer=() => {
     return (
         <div className='w-full  bg-[#0C001B] '>
-            {/*  first  footer for large devices */}
+            {/*  first  Footer for large devices */}
             <div className='pt-0 pb-5 px-0 hidden md:block '>
                 <div className='flex  justify-around  align-top'>
                     <h1 className='font-bold text-4xl text-white'>AI Frame</h1>
@@ -124,4 +124,4 @@ const footer=() => {
     )
 }
 
-export default footer
+export default Footer

@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import PackageCard from "./packageCard";
 
-const swippercard = () => {
+const Swippercard = () => {
     const packages = [
         {
           title: "Starter",
@@ -63,4 +63,4 @@ const swippercard = () => {
   );
 };
 
-export default swippercard;
+export default Swippercard;

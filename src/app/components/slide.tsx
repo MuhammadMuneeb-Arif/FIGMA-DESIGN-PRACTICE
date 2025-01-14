@@ -1,6 +1,6 @@
 import React from 'react'
 
-const slide = () => {
+const Slide = () => {
   return (
   
         <div className=" flex ">
@@ -28,4 +28,4 @@ const slide = () => {
   )
 }
 
-export default slide
+export default Slide
